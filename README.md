@@ -6,3 +6,4 @@ Necessary tasks
 5. Fix the messaging page so that the most recent messages appear and the top and least recent at the bottom (each message is already tagged with a date) chat.js
 6. Scrolling pagination for 3 pages (ask.js,explore.js,tweetview.js)
 7. Be able to search and click tweets (search.js)
+8. Recieve web notifications
