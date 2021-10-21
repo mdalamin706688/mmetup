@@ -1,0 +1,334 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <title>PrograMeet</title>
+    <meta name="description" content="View and edit your profile.">
+    <meta name="keywords" content="programeet, PrograMeet, Google Code Next, Code Next">
+    <meta name="author" content="PrograMeet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="public/settings.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="/styles2.css">
+    <link rel="stylesheet" href="/Designs/B.S.S/Welcome/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Designs/B.S.S/Welcome/assets/css/Corporate-Footer-Clean.css"/>
+    <link rel="stylesheet" href="/chat.css">
+    <link href="/navStyle.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PPD7Q6P');</script> 
+</head>
+<body>
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPD7Q6P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+    <style>
+        a{
+            color:black;
+        }
+        .page-footer ul li:after, .page-footer ul li:before {
+            content: none;
+        }
+          .page-footer {
+          background-color: #f3f3f2;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+        }
+        
+        .page-footer h4 {
+          margin-top: 10px;
+          color: #333333;
+          font-size: 11px;
+          font-weight: bold;
+        }
+        
+        .page-footer p {
+          color: #888;
+          font-size: 11px;
+        }
+        
+        .page-footer .footer-links {
+          list-style: none;
+          padding: 0;
+          margin-bottom: 45px;
+          word-break: break-all;
+        }
+        
+        .page-footer .footer-links a {
+          color: #555;
+          font-size: 11px;
+        }
+        
+        .page-footer .footer-links li {
+          margin-bottom: 5px;
+          line-height: 1.3;
+        }
+        
+        .page-footer .footer-legal .copyright {
+          margin-right: 60px;
+        }
+        
+        .page-footer .footer-legal .legal-links .item {
+          padding-right: 13px;
+          border-right: 1px solid #ccc;
+          margin: 0;
+          margin-right: 13px;
+        }
+        
+        .page-footer .footer-legal .legal-links .item:last-child {
+          border-right: none;
+        }
+        
+        .page-footer .footer-legal .legal-links .item h5 {
+          font-size: 11px;
+          margin-top: 0;
+          margin-bottom: 0;
+          color: black;
+        }
+        
+        .page-footer .region {
+          margin-bottom: 20px;
+        }
+        
+        .page-footer .region a {
+          color: #555;
+          font-size: 11px;
+        }
+        
+        .page-footer .region img {
+          margin-right: 7px;
+        }
+        
+     
+     #navBtn{
+    margin-left: .5rem;
+    margin-top: .2rem;
+    width: 84.09px;
+    border-radius: .25rem;
+    background-color: #007bff;
+    border-color: #007bff;
+     }
+              </style>
+    <!-- <button onclick="logout()">Logout</button> -->
+                
+ <header>
+  <nav
+    class="navbar navbar-light navbar-expand-md bg-white py-3"
+    id="navbar navbar-light navbar-expand-md bg-white py-3"
+  ></nav>
+</header>
+<hr />
+
+                <img id="profilePic">
+
+            </div> 
+                <div class="second-container">
+                    <div class="settings-container">
+                        <div class="settings-block">
+                            <div class="account-settings-box">
+                                <h2 class="heading">Account Info</h2>
+                                <div class="form-block w-form">
+                                    <form id="email-form" name="email-form" data-name="Email Form" class="form">
+                                        <div class="text-field-box">
+                                            <input type="text" class="text-field _2 w-input" maxlength="256"
+                                                name="Username-2" data-name="Username 2" placeholder="Name"
+                                                id="fln" readonly>
+                                        </div>
+                                        <div class="text-field-box bio"><textarea placeholder="Bio" maxlength="5000"
+                                                id="bio" name="field" data-name="Field"
+                                                class="text-field _2-copy w-input" readonly></textarea>
+                                            <div class="text-block-28">Bio.</div>
+                                        </div>
+                                        <!-- <div class="text-field-box _2">
+                                      <input type="text" class="text-field _2 w-input" maxlength="256" name="Username-2" data-name="Username 2" placeholder="Display Name" id="Username-2" required="">
+                                        <div class="text-block-28">Only letters and numbers with no spaces.</div>
+                                    </div> -->
+                                   
+
+                                        <!-- <input type="submit" value="Reset password" data-wait="Please wait..." class="button hide w-button">
+                                    <a href="#" class="button w-button">Reset Password</a> -->
+                                    </form>
+                                    <div id="wait" style="text-align:center;">
+                                        <button class="btn btn-primary" onclick="window.location.reload();" id="request" type="button" style="width:250px;">Send friend request</button>
+                                        <p id="poopjuice"></p>
+                                    </div>
+                                    <div class="w-form-done">
+                                        <div>Thank you! Your submission has been received!</div>
+                                    </div>
+                                    <div class="w-form-fail">
+                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account-settings-box">
+                                <h2 class="heading">Profile Details</h2>
+                                <div class="form-block w-form">
+                                    <form id="email-form" name="email-form" data-name="Email Form" class="form">
+                                        <div class="text-field-box">
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-5"
+                                                data-name="Name 5" placeholder="State" id="state" readonly>
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-5"
+                                                data-name="Name 5" placeholder="Role" id="role" readonly>
+                                        </div>
+                                        <!-- <div class="text-field-box">
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-5"
+                                                data-name="Name 5" placeholder="Role" id="role">
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-6"
+                                                data-name="Name 6" placeholder="Code Next member since"
+                                                id="memberSince">
+                                        </div> -->
+                                        <div class="text-field-box">
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-5"
+                                                data-name="Name 5" placeholder="Interest One" id="interestOne" readonly>
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-6"
+                                                data-name="Name 6" placeholder="Interest Two" id="interestTwo" readonly>
+                                        </div>
+                                        <div class="text-field-box">
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-5"
+                                                data-name="Name 5" placeholder="Skill One" id="skillOne" readonly>
+                                            <input type="text" class="text-field w-input" maxlength="256" name="Name-6"
+                                                data-name="Name 6" placeholder="Skill Two" id="skillTwo" readonly>
+                                        </div>
+                                        <div class="text-field-box _2"><input type="text" class="text-field _2 w-input"
+                                                maxlength="256" name="Username-2" data-name="Username 2"
+                                                placeholder="Hobbies" id="hobbies" readonly>
+                                            <div class="text-block-28">Hobbies.</div>
+                                        </div>
+                                        <div class="text-field-box bio"><textarea placeholder="Project One"
+                                                maxlength="5000" id="projOne" name="field" data-name="Field"
+                                                class="text-field _2-copy w-input" readonly></textarea>
+                                            <div class="text-block-28">Describe one of your favorite projects you've
+                                                completed.</div>
+                                        </div>
+                                        <div class="text-field-box bio"><textarea placeholder="Project Two"
+                                                maxlength="5000" id="projTwo" name="field" data-name="Field"
+                                                class="text-field _2-copy w-input" readonly></textarea>
+                                            <div class="text-block-28">Describe one of your favorite projects you've
+                                                completed.</div>
+                                        </div>
+
+                                    </form>
+                                    <!-- <div class="w-form-done">
+                                        <div>Thank you! Your submission has been received!</div>
+                                    </div>
+                                    <div class="w-form-fail">
+                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Long horizontal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7375625871168388"
+     data-ad-slot="2948673339"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                            <li><a href="terms.html">Terms and Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cookies.html">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h4>Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="bugs.html">Report a Bug</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h4>NYC Coaches Quicklinks</h4>
+                        <ul class="footer-links">
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Falyssa-advisory-cal&sa=D&sntz=1&usg=AFQjCNFn9z2Ovg6uFLQ4WCwlDP2B0JBiVw">Coach Alyssa</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fblanca-advisory-cal&sa=D&sntz=1&usg=AFQjCNHuKRRVlFGp5PfmJ4rTMdHgMRHIlQ">Coach Blanca</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fdonna-advisory-cal&sa=D&sntz=1&usg=AFQjCNECBYANyGji5rciRBKgFKFcq5pwsw">Coach Donna</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fnatalie-advisory-cal&sa=D&sntz=1&usg=AFQjCNFJ8ohw9mc53lfvs8W780gt9b9z_Q">Coach Natalie</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fshaquan-advisory-cal&sa=D&sntz=1&usg=AFQjCNEFxBpJGKbYUZFgur_N2lFLI8zV-g">Coach Shaquan</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fbit.ly%2Fwolf-advisory-cal&sa=D&sntz=1&usg=AFQjCNF7fxI2iNO0s6FAHENa8NDJLrGxVg">Coach Wolf</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h4>California Coaches Quicklinks</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://calendar.google.com/calendar/selfsched?sstoken=UUdJbU1PaVBreUY4fGRlZmF1bHR8NDQwZDgzZjY5ZDU4MWVhOWY0Mzk3MGNiMTFiNmQ2NjQ">Coach Alex</a></li>
+                            <li><a href="https://calendar.google.com/calendar/selfsched?sstoken=UUtxUDRDVXREQktofGRlZmF1bHR8OWVhZGY2NTYzM2VhMTZhMmJhODNlMDI4M2IwNDI0Nj">Coach Amber</a></li>
+                            <li><a href="http://www.google.com/url?q=http%3A%2F%2Fcodenext.me%2FadvisoryPaco&sa=D&sntz=1&usg=AFQjCNG7jreUKLflUsmVxoXktnZEVsFwcg">Coach Paco</a></li>
+                            <li><a href="https://calendar.google.com/calendar/selfsched?sstoken=UU9MRWZhSWJDSXkxfGRlZmF1bHR8YWUzYmUwMmRlYTIzMzI3ZTYzZTY3OGM0MWNmZjcyMDk">Coach Sam</a></li>
+                            <li><a href="https://calendar.google.com/calendar/selfsched?sstoken=UU95N1d3QklvZDhrfGRlZmF1bHR8ZDdmMThkY2JiNTdmYzIxYTE3ZTRjNmNjZWNlNTQyOTk">Coach Vanessa</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-legal">
+                    <div class="d-inline-block copyright">
+                        <p class="d-inline-block">Copyright © 2020. All rights reserved.<br></p>
+                    </div>
+                    <div class="d-inline-block legal-links">
+                        <a href="https://www.instagram.com/programeet/">
+                        <div class="d-inline-block item"><img class="img-fluid" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-An6np82QKTQ%2FV4ego8qnXzI%2FAAAAAAAABqE%2FkyM3AaEyvv0aKi3cQl9-nRRry4tVXjG9gCEw%2Fs1600%2FThe%2BNew%2BInstagram%2BLogo%2BWith%2BTransparent%2BBackground%2B11.png&amp;f=1&amp;nofb=1"></div>
+                        </a>
+                        <a href="https://www.twitter.com/programeet">
+                        <div class="d-inline-block item"><img class="img-fluid" src="https://socialb.co.uk/wp-content/uploads/2017/04/Twitter_logo_bird_transparent_png-1024x831.png"></div>
+                        </a>
+                        <a href="https://www.tiktok.com/@programeet?lang=en">
+                        <div class="d-inline-block item"><img class="img-fluid" src="tiktok.png"></div>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCqhjpEM91VyazAvQdD4IGIg">
+                            <div class="d-inline-block item"><img class="img-fluid" src="/YT.jpg"></div>
+                            </a>
+                        <div
+                            class="d-inline-block item">
+                            <h5>Follow us on Instagram and Twitter for the latest updates</h5>
+                    </div>
+                    <div class="d-inline-block item">
+                        <h5>Made in NYC</h5>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>  
+    <script type="text/javascript" src="/projectKey.js"></script>
+    <script type="text/javascript" src="public/profile.js"></script>
+    <script src="navbar.js"></script>
+    <script src="/notifSpan.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/search.js"></script>
+
+</body>
+
+</html>
