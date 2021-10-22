@@ -209,26 +209,26 @@ firebase.auth().onAuthStateChanged((user) => {
 								alert(error);
 							});
 					});
-          function PopulateWFList(){
-            const numberOfUsers = 28;
-            const randomIndex = Math.floor(Math.random() * numberOfUsers);
-            var ref = firebase.database().ref("users");
-            ref.limitToLast(4).on("value", function (cOne) {
-              cOne.forEach(function (snap) {
-                user = snap.val();
-                document.getElementById("card").innerHTML += `
-                  <div class="profile">
-        <img class="profile-pic" id="profile-pic" src=${user.photoURL}></img>
-        <div class="profile-info">
-        <span class="display-name">${user.name}</span>
-        <span class="username">${user.username}</span>
-        </div>
-        </div>`;
-              });
-			});
+        //   function PopulateWFList(){
+        //     const numberOfUsers = 28;
+        //     const randomIndex = Math.floor(Math.random() * numberOfUsers);
+        //     var ref = firebase.database().ref("users");
+        //     ref.limitToLast(4).on("value", function (cOne) {
+        //       cOne.forEach(function (snap) {
+        //         user = snap.val();
+        //         document.getElementById("card").innerHTML += `
+        //           <div class="profile">
+        // <img class="profile-pic" id="profile-pic" src=${user.photoURL}></img>
+        // <div class="profile-info">
+        // <span class="display-name">${user.name}</span>
+        // <span class="username">${user.username}</span>
+        // </div>
+        // </div>`;
+        //       });
+		// 	});
 		
-          }
-          PopulateWFList();
+        //   }
+        //   PopulateWFList();
 
 	// 				function PopulateFriendList() {
 	// 					var friends = firebase.database().ref("friend_list");
