@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <title>PrograMeet</title>
+    <meta
+      name="description"
+      content="View all user profiles and interact with them."
+    />
+    <meta
+      name="keywords"
+      content="programeet, PrograMeet, Google Code Next, Code Next"
+    />
+    <meta name="author" content="PrograMeet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+    <link rel="stylesheet" href="Designs/B.S.S/Welcome/assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Designs/B.S.S/Welcome/assets/css/Corporate-Footer-Clean.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="/chat.css" rel="stylesheet" /> 
+    <link href="/navStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/ask.css">
+
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-light navbar-expand-md bg-white py-3"
+        id="navbar navbar-light navbar-expand-md bg-white py-3"
+      ></nav>
+    </header>
+    <hr />
+
+    <button
+      type="button"
+      class="btn btn-default btn-circle btn-lg"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      <div style="background-color: blue;">
+      <img src="https://programeet.com/logo.png" id="tweet" style="height: 75px; width: 75px;border-radius: 50%;position:fixed;background-color: #cccccc;"/>
+    </div>
+    </button>
+
+    <div class="container">
+
+      
+      <div
+        class="modal fade"
+        id="responseModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="exampleModalLabel"
+                style="text-align: center"
+              >
+                Reply
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Reply post:</label>
+                <textarea
+                  class="form-control"
+                  id="postReply"
+                ></textarea>
+              </div>
+              <div class="dropdown">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" id="replyButton">
+                Post
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+<div class="container mt-4 mb-5" id="list_div"></div>
+<div class="container mt-4 mb-5" id="allReplies"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script type="text/javascript" src="/projectKey.js"></script>
+    <script type="text/javascript" src="public/tweetview.js"></script>
+    <script src="navbar.js"></script>
+    <script src="/notifSpan.js"></script>
+    <script src="Scripts/popper-1.14.7.min.js"></script>
+    <script src="Scripts/bootstrap-4.3.1.min.js"></script>
+  </body>
+</html>
